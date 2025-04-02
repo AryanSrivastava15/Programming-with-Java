@@ -1,0 +1,56 @@
+Abstraction
+
+- It allows users to interact with applications without needing to understand the underlying complexities.
+- For Example, in a messaging app, users can send messages without knowing how the app works internally.
+
+- An Abstract class in Java is a class that cannot be instantiated and is declared with abstract keyword. It can contain both abstract methods (without a body) and concrete methods (with a body).
+
+- You can create an abstract class for buttons in a messaging app, which includes an abstract method called buttonPress.
+
+- To create specific button functionalities (like send, like, and forward), you need to extend the abstract class and implement the abstract methods in the subclasses.
+
+- The override annotation is used to indicate that a method in a subclass is overriding a method from its superclass.
+
+/*
+abstract class AbstractButtonClass{
+    String caption;
+    public abstract void buttonPress();
+
+    public void setCaption(String caption){
+        this.caption = caption;
+    }
+
+    public String getCaption(){
+        return this.caption;
+    }
+}
+
+interface ButtonPress {
+    void buttonPress();
+}
+
+class SendButtonClass extends AbstractButtonClass{
+    String sendTo;
+    String message;
+    @override
+    public void buttonPress(){
+        System.out.println("Sending " + this.message + " to " + this.sendTo);
+    }
+    public void setSendTo(String sendTo){
+        this.sendTo = sendTo;
+    }
+    public void setMessage(String message){
+        this.message = message;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        SendButtonClass sendButton = new SendButtonClass();
+        sendButton.setCaption("Send");
+        sendButton.setSendTo("a@b.com");
+        sendButton.setMessage("Hello World");
+        sendButton.buttonPress();
+    }
+}
+*/

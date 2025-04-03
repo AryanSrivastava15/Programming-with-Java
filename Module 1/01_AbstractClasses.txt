@@ -54,3 +54,41 @@ public class Main {
     }
 }
 */
+
+Ques. What is an Abstract Method?
+1. An abstract method is a method without a body (i.e., no implementation).
+2. It acts as a blueprint and must be overridden in the subclass.
+3. Declared using the abstract keyword.
+/*
+abstract class Shape {
+    public abstract void draw();
+}
+*/
+
+Ques. What is an Abstract Class?
+1. Helps define common structure/behavior across related classes.
+2. Encourages code consistency and enforces contracts for subclasses.
+3. Useful when multiple subclasses share the same method name but differ in implementation.
+
+-- Examples from Real-World Hierarchies:
+1. Animal Hierarchy
+    Common abstract methods: eat(), move(), sound().
+    Subclasses implement these in their own way:
+        Fish.move() → "A fish swims"
+        Horse.move() → "A horse gallops"
+
+2. Shape Hierarchy
+    Abstract methods: draw(), calculateArea()
+    Subclasses like Rectangle, Circle, Triangle implement them with shape-specific logic.
+
+3. Button (UI Component) Hierarchy
+    Abstract methods: setText(), setIcon(), onClick()
+    Subclasses like SimpleButton, RadioButton, ToggleButton override them:
+        SimpleButton.onClick() → prints “Hello World”
+        ToggleButton.onClick() → changes state when clicked
+
+Ques. What are the benefits of Using Abstract Methods?
+1. Promotes modular and scalable design.
+2. Saves time by avoiding repetitive code.
+3. Helps organize classes into logical hierarchies.
+4. Makes future extension and maintenance easier.

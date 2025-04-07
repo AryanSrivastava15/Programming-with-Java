@@ -11,7 +11,7 @@
 -> Implementation: You will declare the abstract Vehicle class and create concrete classes like Car and Truck, implementing specific attributes and methods.
 
 -> Example:
-
+```
 public class School {
     public static void main(String[] args) {
         Date date1 = new Date(1, 1, 2005);
@@ -103,3 +103,4 @@ abstract class Employee extends Person{
     abstract void setSalary();
     abstract int getSalary();
 }
+```
